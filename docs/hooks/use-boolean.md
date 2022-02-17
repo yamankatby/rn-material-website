@@ -6,7 +6,7 @@ and `toggle` functions.
 ## Import
 
 ```js
-import { useBoolean } from '@chakra-ui/react'
+import { useBoolean } from '@react-native-material/core'
 ```
 
 ## Return value
