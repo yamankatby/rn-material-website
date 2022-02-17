@@ -81,5 +81,5 @@ use `justify-content: space-between` for more control of the layout.
 | `dividerStyle`       | `StyleProp<ViewStyle>`                                              | A style object to apply to each divider.                                                           |
 | `shouldWrapChildren` | `boolean`                                                           | If `true`, the children will be wrapped in a `Box` and the `Box` will take the spacing properties. |
 
-[`...FlexProps`](/docs/layout/flex#props) , [`...SelectorProps`](/docs/layout/selector#props)
+[`...FlexProps`](/pages/layout/flex#props) , [`...SelectorProps`](/pages/layout/selector#props)
 

@@ -95,4 +95,4 @@ export default App;
 | `grow`      | `number`                                                     | Shorthand for the `flexGrow` style property.                        |
 | `shrink`    | `number`                                                     | Shorthand for the `flexShrink` style property.                      |
 
-[`...BoxProps`](/docs/layout/box#props)
+[`...BoxProps`](/pages/layout/box#props)

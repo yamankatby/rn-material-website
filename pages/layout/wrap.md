@@ -89,4 +89,4 @@ export default App;
 | `spacing`            | [`Spacing`](https://react-native-flex-layout.js.org/guides/spacing) | The spacing between children (even if it wraps).                                                   |
 | `shouldWrapChildren` | `boolean`                                                           | If `true`, the children will be wrapped in a `Box` and the `Box` will take the spacing properties. |
 
-[`...FlexProps`](/docs/layout/flex#props) , [`...SelectorProps`](/docs/layout/selector#props)
+[`...FlexProps`](/pages/layout/flex#props) , [`...SelectorProps`](/pages/layout/selector#props)
