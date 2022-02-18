@@ -1,6 +1,46 @@
+import { CodeIcon, ColorSwatchIcon, CubeTransparentIcon, PuzzleIcon } from "@heroicons/react/outline";
+
 # Getting started
 
 Add **rn-material** to your project in < 1 minute.
+
+export const Item = ({ title, subtitle, icon }) => {
+  return (
+    <div className="flex items-center">
+      <div className="w-14 h-14 flex justify-center items-center bg-gray-100 rounded-xl">
+        {icon}
+      </div>
+      <div className="ml-4 flex flex-col">
+        <h4 className="font-bold">{title}</h4>
+        <p className="">{subtitle}</p>
+      </div>
+    </div>
+  );
+};
+
+<div className="not-prose grid grid-cols-2 gap-8">
+  <Item
+    title="Small bundle"
+    subtitle="4kb when using all exports"
+    icon={<CubeTransparentIcon className="w-7" />}
+  />
+  <Item
+    title="Layout props"
+    subtitle="Simple, productive API"
+    icon={<CodeIcon className="w-7" />}
+  />
+  <Item
+    title="Unstyled"
+    subtitle="Use the styling solution of your choice"
+    icon={<ColorSwatchIcon className="w-7" />}
+  />
+  <Item
+    title="Composable"
+    subtitle="Combine to create complex layouts"
+    icon={<PuzzleIcon className="w-7" />}
+  />
+</div>
+
 
 ## Installation
 
