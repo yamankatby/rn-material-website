@@ -2,6 +2,8 @@ import Link from "next/link";
 import React from "react";
 
 export interface ISidebarItem {
+  title?: string;
+  description?: string;
   path: string;
   sidebar_position?: number;
 }
@@ -22,7 +24,7 @@ const Sidebar: React.FC<IProps> = ({ sidebar }) => {
   const getItem = (item: ISidebarItem) => (
     <li key={item.path}>
       <Link href={item.path}>
-        <a>{item.path}</a>
+        <a>{item.title || item.path}</a>
       </Link>
     </li>
   );

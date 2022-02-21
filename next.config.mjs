@@ -10,6 +10,7 @@ const getStaticProps = (path) =>
 export const getStaticProps = async () => {
   const fs = require("fs/promises");
   const matter = require("gray-matter");
+  const marked = require("marked");
 
   const fetch = async (dir, breadcrumbs = []) => {
     const files = await fs.readdir(dir);
@@ -25,10 +26,16 @@ export const getStaticProps = async () => {
         const items = await fetch(filePath, [...breadcrumbs, _category_]);
         val.push({ ..._category_, items });
       } else if (filePath.endsWith(".mdx") || filePath.endsWith(".md")) {
-        const frontmatter = matter(await fs.readFile(filePath, "utf8")).data;
+        const { data, content } = matter(await fs.readFile(filePath, "utf8"));
+        const blocks = marked.lexer(content);
         const path = filePath.replace(".mdx", "").replace(".md", "").replace("pages", "").replace("index", "");
-
-        val.push({ ...frontmatter, breadcrumbs, path });
+        val.push({
+          title: blocks.find((block) => block.type === "heading")?.text || null,
+          description: blocks.find((block) => block.type === "paragraph")?.text || null,
+          ...data,
+          breadcrumbs,
+          path,
+        });
       }
     }
 
@@ -67,6 +74,13 @@ const nextConfig = {
 };
 
 const remarkLayout = () => (tree, file) => {
+  if (tree.children[0].type === 'thematicBreak') {
+    const firstHeadingIndex = tree.children.findIndex(t => t.type === 'heading')
+    if (firstHeadingIndex !== -1) {
+      tree.children.splice(0, firstHeadingIndex + 1)
+    }
+  }
+
   const path = file.history[0]
     .replace(file.cwd, "")
     .replace(".mdx", "")
