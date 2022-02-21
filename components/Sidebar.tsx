@@ -2,8 +2,8 @@ import Link from "next/link";
 import React from "react";
 
 interface ISidebarItem {
-  sidebar_position?: number;
   path: string;
+  sidebar_position?: number;
 }
 
 interface ISidebarGroup {
@@ -32,8 +32,6 @@ const Sidebar: React.FC<IProps> = ({ sidebar }) => {
       <ul>{group.items.sort((a, b) => (a.sidebar_position || 0) - (b.sidebar_position || 0)).map(getItem)}</ul>
     </li>
   );
-
-  console.log(sidebar);
 
   return (
     <ul>
