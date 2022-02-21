@@ -2,9 +2,11 @@
 import { createVanillaExtractPlugin } from "@vanilla-extract/next-plugin";
 import { parse } from "acorn";
 import MDX from "@next/mdx";
+import remarkGfm from "remark-gfm";
 import remarkPrism from "remark-prism";
 
-const getStaticProps = (path) => `
+const getStaticProps = (path) =>
+  `
 export const getStaticProps = async () => {
   const fs = require("fs/promises");
   const matter = require("gray-matter");
@@ -42,18 +44,18 @@ export const getStaticProps = async () => {
     );
 
   const path = "$path";
-  const flatten = sidebar.flatMap(item => item.items || [item]);
-  const index = flatten.findIndex(item => item.path === path);
+  const flatten = sidebar.flatMap((item) => item.items || [item]);
+  const index = flatten.findIndex((item) => item.path === path);
   const current = flatten[index];
   const prev = index > 0 ? flatten[index - 1] : null;
   const next = index < flatten.length - 1 ? flatten[index + 1] : null;
-  
+
   return {
     props: {
       sidebar,
       current,
       prev,
-      next
+      next,
     },
   };
 };
@@ -64,14 +66,45 @@ const nextConfig = {
   pageExtensions: ["tsx", "ts", "js", "jsx", "md", "mdx"]
 };
 
-const remarkGetStaticProps = () => (tree, file) => {
-  const path = file.history[0].replace(file.cwd, "").replace(".mdx", "").replace(".md", "").replace("/pages", "").replace("index", "")
-  tree.children.push({
+const remarkLayout = () => (tree, file) => {
+  const path = file.history[0]
+    .replace(file.cwd, "")
+    .replace(".mdx", "")
+    .replace(".md", "")
+    .replace("/pages", "")
+    .replace("index", "");
+
+  tree.children.unshift({
     type: "mdxjsEsm",
     data: {
-      estree: parse(getStaticProps(path), { sourceType: "module", ecmaVersion: 2020 })
+      estree: parse(
+        `import { withLayout } from "${path
+          .split("/")
+          .slice(1)
+          .map(() => "../")
+          .join("")}components/Layout";`,
+        {
+          sourceType: "module",
+          ecmaVersion: 2020
+        }
+      )
     }
   });
+
+  tree.children.push(
+    {
+      type: "mdxjsEsm",
+      data: {
+        estree: parse(getStaticProps(path), { sourceType: "module", ecmaVersion: 2020 })
+      }
+    },
+    {
+      type: "mdxjsEsm",
+      data: {
+        estree: parse(`export default (props) => withLayout(props);`, { sourceType: "module", ecmaVersion: 2020 })
+      }
+    }
+  );
 };
 
 const withVanillaExtract = createVanillaExtractPlugin();
@@ -79,7 +112,7 @@ const withVanillaExtract = createVanillaExtractPlugin();
 const withMDX = MDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkGetStaticProps, remarkPrism]
+    remarkPlugins: [remarkLayout, remarkGfm, remarkPrism]
   }
 });
 

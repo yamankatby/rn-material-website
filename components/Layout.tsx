@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { PropsWithChildren } from "react";
 import Sidebar, { ISidebar, ISidebarItem } from "./Sidebar";
 
 interface IProps {
@@ -9,17 +9,12 @@ interface IProps {
 }
 
 const Layout: React.FC<IProps> = ({ sidebar, children, ...rest }) => {
-  useEffect(() => {
-    console.log(rest)
-  }, [rest])
   return (
     <div className="min-h-screen flex flex-col lg:flex-row">
       <Sidebar sidebar={sidebar} />
-      <div className="prose max-w-3xl mx-auto">
-        {children}
-      </div>
+      <div className="prose max-w-3xl mx-auto">{children}</div>
     </div>
-  )
-}
+  );
+};
 
-export default Layout;
+export const withLayout = (props: PropsWithChildren<IProps>) => <Layout {...props} />;
