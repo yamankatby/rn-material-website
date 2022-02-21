@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -16,6 +17,7 @@
     "gray-matter": "^4.0.3",
     "marked": "^4.0.12",
     "next": "^12.1.0",
+    "next-sitemap": "^2.4.5",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "remark-gfm": "^3.0.1",

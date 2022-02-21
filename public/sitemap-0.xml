@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://rn-material.js.org</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.389Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/activity-indicator</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.389Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/app-bar</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.389Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/avatar</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.389Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/backdrop</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.389Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/badge</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.389Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/banner</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.389Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/button</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.389Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/chip</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.389Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/dialog</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.389Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/divider</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.389Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/fab</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.389Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/icon</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/icon-button</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/list-item</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/portal</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/pressable</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/snackbar</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/surface</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/switch</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/text</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/components/text-input</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/getting-started</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/hooks/use-boolean</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/hooks/use-theme</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/layout/box</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/layout/divider</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/layout/flex</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/layout/selector</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/layout/spacer</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/layout/stack</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+<url><loc>https://rn-material.js.org/layout/wrap</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-02-21T15:58:43.390Z</lastmod></url>
+</urlset>

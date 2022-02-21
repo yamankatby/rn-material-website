@@ -51,6 +51,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@corex/deepmerge@npm:^2.6.148":
+  version: 2.6.148
+  resolution: "@corex/deepmerge@npm:2.6.148"
+  checksum: b80b6b3e408901151de26e27b519a43cda1771a81e5390ff10cd6b47add0139bb315ca44112ff076d68ac887d7cfe237c9fb33868efb04839c4afb7c38864385
+  languageName: node
+  linkType: hard
+
 "@emotion/hash@npm:^0.8.0":
   version: 0.8.0
   resolution: "@emotion/hash@npm:0.8.0"
@@ -3867,6 +3874,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next-sitemap@npm:^2.4.5":
+  version: 2.4.5
+  resolution: "next-sitemap@npm:2.4.5"
+  dependencies:
+    "@corex/deepmerge": ^2.6.148
+    minimist: ^1.2.5
+  peerDependencies:
+    next: "*"
+  bin:
+    next-sitemap: bin/next-sitemap
+  checksum: bebbe8821df6b7331a27fd551cd3d8cb529752e4e25a89d9852ae815597a04a7c2579f07be625d2940671bc9161372e484c3918a6f6a9e88e113eee29b63a5e3
+  languageName: node
+  linkType: hard
+
 "next@npm:^12.1.0":
   version: 12.1.0
   resolution: "next@npm:12.1.0"
@@ -4704,6 +4725,7 @@ __metadata:
     gray-matter: ^4.0.3
     marked: ^4.0.12
     next: ^12.1.0
+    next-sitemap: ^2.4.5
     postcss: ^8.4.6
     react: 17.0.2
     react-dom: 17.0.2

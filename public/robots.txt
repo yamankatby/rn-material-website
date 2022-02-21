@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://rn-material.js.org/
+
+# Sitemaps
+Sitemap: https://rn-material.js.org/sitemap.xml
