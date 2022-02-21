@@ -74,10 +74,10 @@ const nextConfig = {
 };
 
 const remarkLayout = () => (tree, file) => {
-  if (tree.children[0].type === 'thematicBreak') {
-    const firstHeadingIndex = tree.children.findIndex(t => t.type === 'heading')
+  if (tree.children[0].type === "thematicBreak") {
+    const firstHeadingIndex = tree.children.findIndex((t) => t.type === "heading");
     if (firstHeadingIndex !== -1) {
-      tree.children.splice(0, firstHeadingIndex + 1)
+      tree.children.splice(0, firstHeadingIndex + 1);
     }
   }
 
