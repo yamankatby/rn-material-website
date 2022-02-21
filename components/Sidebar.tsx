@@ -15,15 +15,15 @@ interface IProps {
 
 const Sidebar: React.FC<IProps> = ({ sidebar }) => {
   const getItem = (item: ISidebarItem) => (
-    <li>
+    <li key={item.path}>
       <Link href={item.path}>
         <a>{item.path}</a>
       </Link>
     </li>
   )
 
-  const getGroup = (group: ISidebarGroup) => (
-    <li>
+  const getGroup = (group: ISidebarGroup, index: number) => (
+    <li key={index}>
       <ul>
         {group.map(getItem)}
       </ul>
@@ -32,7 +32,7 @@ const Sidebar: React.FC<IProps> = ({ sidebar }) => {
 
   return (
     <ul>
-      {sidebar.map(item => Array.isArray(item) ? getGroup(item) : getItem(item))}
+      {sidebar.map((item, index) => Array.isArray(item) ? getGroup(item, index) : getItem(item))}
     </ul>
   );
 }
