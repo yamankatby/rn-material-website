@@ -4,7 +4,7 @@ import { parse } from "acorn";
 import MDX from "@next/mdx";
 import remarkPrism from "remark-prism";
 
-const getStaticProps = `
+const getStaticProps = (path) => `
 export const getStaticProps = async () => {
   const fs = require("fs/promises");
   const matter = require("gray-matter");
@@ -13,14 +13,14 @@ export const getStaticProps = async () => {
     const files = await fs.readdir(dir);
 
     const val = [];
-    
+
     for (let file of files) {
-      const filePath = \`${dir}/${file}\`;
+      const filePath = dir + "/" + file;
 
       const stat = await fs.stat(filePath);
       if (stat.isDirectory()) {
         const items = await fetch(filePath);
-        const _category_ = JSON.parse(await fs.readFile(\`${filePath}/_category_.json\`, "utf8"));
+        const _category_ = JSON.parse(await fs.readFile(filePath + "/_category_.json", "utf8"));
         val.push({ ..._category_, items });
       } else if (filePath.endsWith(".mdx") || filePath.endsWith(".md")) {
         const frontmatter = matter(await fs.readFile(filePath, "utf8")).data;
@@ -33,26 +33,44 @@ export const getStaticProps = async () => {
     return val;
   };
 
-  const sidebar = await fetch("pages");
+  const sidebar = (await fetch("pages"))
+    .sort((a, b) => (a.sidebar_position || 0) - (b.sidebar_position || 0))
+    .map((item) =>
+      "items" in item
+        ? { ...item, items: item.items.sort((a, b) => (a.sidebar_position || 0) - (b.sidebar_position || 0)) }
+        : item
+    );
 
+  const path = "$path";
+  const flatten = sidebar.flatMap(item => item.items || [item]);
+  const index = flatten.findIndex(item => item.path === path);
+  const current = flatten[index];
+  const prev = index > 0 ? flatten[index - 1] : null;
+  const next = index < flatten.length - 1 ? flatten[index + 1] : null;
+  
   return {
     props: {
-      sidebar
-    }
+      sidebar,
+      current,
+      prev,
+      next
+    },
   };
 };
-`;
+`.replace("$path", path);
 
 const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ["tsx", "ts", "js", "jsx", "md", "mdx"]
 };
 
-const remarkGetStaticProps = () => (tree) => {
+const remarkGetStaticProps = () => (tree, file) => {
+  const path = file.history[0].replace(file.cwd, "").replace(".mdx", "").replace(".md", "").replace("/pages", "").replace("index", "")
+  console.log(path)
   tree.children.push({
     type: "mdxjsEsm",
     data: {
-      estree: parse(getStaticProps, { sourceType: "module", ecmaVersion: 2020 })
+      estree: parse(getStaticProps(path), { sourceType: "module", ecmaVersion: 2020 })
     }
   });
 };

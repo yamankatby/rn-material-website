@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-interface ISidebarItem {
+export interface ISidebarItem {
   path: string;
   sidebar_position?: number;
 }
@@ -29,15 +29,13 @@ const Sidebar: React.FC<IProps> = ({ sidebar }) => {
 
   const getGroup = (group: ISidebarGroup) => (
     <li key={group.title}>
-      <ul>{group.items.sort((a, b) => (a.sidebar_position || 0) - (b.sidebar_position || 0)).map(getItem)}</ul>
+      <ul>{group.items.map(getItem)}</ul>
     </li>
   );
 
   return (
     <ul>
-      {sidebar
-        .sort((a, b) => (a.sidebar_position || 0) - (b.sidebar_position || 0))
-        .map((item) => ("items" in item ? getGroup(item) : getItem(item)))}
+      {sidebar.map((item) => ("items" in item ? getGroup(item) : getItem(item)))}
     </ul>
   );
 };
