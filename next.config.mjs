@@ -9,7 +9,7 @@ export const getStaticProps = async () => {
   const fs = require("fs/promises");
   const matter = require("gray-matter");
 
-  const fetch = async (dir) => {
+  const fetch = async (dir, breadcrumbs = []) => {
     const files = await fs.readdir(dir);
 
     const val = [];
@@ -19,14 +19,14 @@ export const getStaticProps = async () => {
 
       const stat = await fs.stat(filePath);
       if (stat.isDirectory()) {
-        const items = await fetch(filePath);
         const _category_ = JSON.parse(await fs.readFile(filePath + "/_category_.json", "utf8"));
+        const items = await fetch(filePath, [...breadcrumbs, _category_]);
         val.push({ ..._category_, items });
       } else if (filePath.endsWith(".mdx") || filePath.endsWith(".md")) {
         const frontmatter = matter(await fs.readFile(filePath, "utf8")).data;
         const path = filePath.replace(".mdx", "").replace(".md", "").replace("pages", "").replace("index", "");
 
-        val.push({ ...frontmatter, path });
+        val.push({ ...frontmatter, breadcrumbs, path });
       }
     }
 
@@ -66,7 +66,6 @@ const nextConfig = {
 
 const remarkGetStaticProps = () => (tree, file) => {
   const path = file.history[0].replace(file.cwd, "").replace(".mdx", "").replace(".md", "").replace("/pages", "").replace("index", "")
-  console.log(path)
   tree.children.push({
     type: "mdxjsEsm",
     data: {
