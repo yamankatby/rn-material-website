@@ -6,7 +6,7 @@ import remarkPrism from "remark-prism";
 
 const nextConfig = {
   reactStrictMode: true,
-  pageExtensions: ["tsx", "ts", "js", "jsx", "md", "mdx"],
+  pageExtensions: ["tsx", "ts", "js", "jsx", "md", "mdx"]
 };
 
 const remarkGetStaticProps = () => (tree, file) => {
@@ -17,6 +17,7 @@ const remarkGetStaticProps = () => (tree, file) => {
         `
 export const getStaticProps = async () => {
   const fs = require("fs/promises");
+  const matter = require("gray-matter");
   const readDir = async (dir) => {
     const files = await fs.readdir(dir);
     return await Promise.all(
@@ -24,25 +25,33 @@ export const getStaticProps = async () => {
         const filePath = dir + "/" + file;
         const stat = await fs.stat(filePath);
         if (stat.isDirectory()) {
-          return readDir(filePath);
+          const config = await fs.readFile(filePath + "/_category_.json", "utf8");
+          const items = (await readDir(filePath)).filter(Boolean);
+          return { ...JSON.parse(config), items };
         } else if (filePath.endsWith(".md") || filePath.endsWith(".mdx")) {
-          return { path: filePath.replace("pages", "").replace(".mdx", "").replace(".md", "").replace("index", "") };
+          const content = await fs.readFile(filePath, "utf8");
+          return {
+            ...matter(content).data,
+            path: filePath.replace("pages", "").replace(".mdx", "").replace(".md", "").replace("index", ""),
+          };
         }
       })
     );
   };
   const sidebar = (await readDir("pages")).filter(Boolean);
+  console.log(JSON.stringify(sidebar, null, 2));
   return {
-    props: { sidebar }
+    props: { sidebar },
   };
 };
+
       `,
         {
           sourceType: "module",
-          ecmaVersion: 2020,
+          ecmaVersion: 2020
         }
-      ),
-    },
+      )
+    }
   });
 };
 
@@ -51,8 +60,8 @@ const withVanillaExtract = createVanillaExtractPlugin();
 const withMDX = MDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkGetStaticProps, remarkPrism],
-  },
+    remarkPlugins: [remarkGetStaticProps, remarkPrism]
+  }
 });
 
 export default withVanillaExtract(withMDX(nextConfig));
