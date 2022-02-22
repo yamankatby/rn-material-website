@@ -70,7 +70,10 @@ export const getStaticProps = async () => {
 
 const nextConfig = {
   reactStrictMode: true,
-  pageExtensions: ["tsx", "ts", "js", "jsx", "md", "mdx"]
+  pageExtensions: ["tsx", "ts", "js", "jsx", "md", "mdx"],
+  experimental: {
+    scrollRestoration: true
+  }
 };
 
 const remarkLayout = () => (tree, file) => {

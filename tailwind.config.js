@@ -5,10 +5,12 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx}"
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        primary: colors.indigo
+        primary: colors.indigo,
+        gray: colors.zinc
       },
       typography: (theme) => ({
         DEFAULT: {
