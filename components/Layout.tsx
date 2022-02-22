@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from "react";
 import Head from "next/head";
+import Script from "next/script";
 import Sidebar, { ISidebar, ISidebarItem } from "./Sidebar";
 
 interface IProps {
@@ -16,6 +17,17 @@ const Layout: React.FC<IProps> = ({ sidebar, current, children }) => {
         <title>{current.title} | React Native Material</title>
         <meta name="description" content={current.description} />
       </Head>
+
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-RJL6PXS3XY" strategy="afterInteractive" />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-RJL6PXS3XY');
+        `}
+      </Script>
 
       <Sidebar sidebar={sidebar} />
       <div className="prose max-w-3xl mx-auto">{children}</div>
