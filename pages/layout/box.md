@@ -12,14 +12,14 @@ The `Box` component serves as a wrapper component for most of the styling proper
 ## Import
 
 ```js
-import { Box } from "@react-native-material/core";
+import { Box } from "rn-material";
 ```
 
 ## Usage
 
 ```js with-preview
 import React from "react";
-import { Box } from "@react-native-material/core";
+import { Box } from "rn-material";
 
 const App = () => (
   <Box w={32} h={32} m={4} style={{ backgroundColor: "tomato" }} />

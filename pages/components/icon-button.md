@@ -4,7 +4,7 @@
 
 ```js with-preview
 import React from "react";
-import { Stack, IconButton } from "@react-native-material/core";
+import { Stack, IconButton } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (
@@ -21,14 +21,14 @@ export default App;
 ## Import
 
 ```js
-import { IconButton } from "@react-native-material/core";
+import { IconButton } from "rn-material";
 ```
 
 ## Usage
 
 ```js with-preview
 import React from "react";
-import { Stack, IconButton } from "@react-native-material/core";
+import { Stack, IconButton } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (

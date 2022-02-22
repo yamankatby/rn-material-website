@@ -4,7 +4,7 @@ Use text to present your design and content as clearly and efficiently as possib
 
 ```js with-preview
 import React from "react";
-import { Text, Stack } from "@react-native-material/core";
+import { Text, Stack } from "rn-material";
 
 const App = () => (
   <Stack m={4} spacing={4}>
@@ -53,14 +53,14 @@ sizes that work well together along with the layout grid.
 ## Import
 
 ```js
-import { Text } from "@react-native-material/core";
+import { Text } from "rn-material";
 ```
 
 ## Usage
 
 ```js with-preview
 import React from "react";
-import { Text } from "@react-native-material/core";
+import { Text } from "rn-material";
 
 const App = () => (
   <Text variant="h3" style={{ margin: 16 }}>

@@ -4,7 +4,7 @@ Activity Indicators provide a visual cue that an action is either processing, aw
 
 ```js with-preview
 import React from "react";
-import { Stack, ActivityIndicator } from "@react-native-material/core";
+import { Stack, ActivityIndicator } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (
@@ -24,7 +24,7 @@ export default App;
 ## Import
 
 ```js
-import { ActivityIndicator } from "@react-native-material/core";
+import { ActivityIndicator } from "rn-material";
 ```
 
 ## Usage
@@ -40,7 +40,7 @@ import {
   Button,
   FAB,
   IconButton,
-} from "@react-native-material/core";
+} from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (

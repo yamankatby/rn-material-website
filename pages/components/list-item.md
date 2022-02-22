@@ -4,7 +4,7 @@ Lists are continuous, vertical indexes of text or images.
 
 ```js with-preview
 import React from "react";
-import { ListItem } from "@react-native-material/core";
+import { ListItem } from "rn-material";
 
 const App = () => (
   <>
@@ -23,7 +23,7 @@ export default App;
 ## Import
 
 ```js
-import { ListItem } from "@react-native-material/core";
+import { ListItem } from "rn-material";
 ```
 
 ## Usage
@@ -35,7 +35,7 @@ which are represented by icons and text.
 
 ```js with-preview
 import React from "react";
-import { ListItem } from "@react-native-material/core";
+import { ListItem } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (
@@ -68,7 +68,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { ListItem } from "@react-native-material/core";
+import { ListItem } from "rn-material";
 
 const App = () => (
   <>
@@ -94,7 +94,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { ListItem, Avatar } from "@react-native-material/core";
+import { ListItem, Avatar } from "rn-material";
 
 const App = () => (
   <>

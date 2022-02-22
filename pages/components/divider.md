@@ -4,7 +4,7 @@ A divider is a thin line that groups content in lists and layouts.
 
 ```js with-preview
 import React from "react";
-import { Divider } from "@react-native-material/core";
+import { Divider } from "rn-material";
 
 const App = () => <Divider style={{ marginTop: 60 }} leadingInset={16} />;
 
@@ -19,14 +19,14 @@ Dividers separate content into clear groups.
 ## Import
 
 ```js
-import { Divider } from "@react-native-material/core";
+import { Divider } from "rn-material";
 ```
 
 ## Coloring
 
 ```js with-preview
 import React from "react";
-import { Divider } from "@react-native-material/core";
+import { Divider } from "rn-material";
 
 const App = () => (
   <Divider style={{ marginTop: 60 }} leadingInset={16} color="pink" />
@@ -39,7 +39,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { Divider } from "@react-native-material/core";
+import { Divider } from "rn-material";
 
 const App = () => (
   <Divider style={{ marginTop: 60 }} leadingInset={32} trailingInset={32} />

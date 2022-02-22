@@ -40,7 +40,7 @@ While you can pass the verbose props, using the shorthand can save you some time
 
 ```jsx with-preview
 import React from "react";
-import { Flex, Box, Text } from "@react-native-material/core";
+import { Flex, Box, Text } from "rn-material";
 
 const App = () => (
   <Flex fill>
@@ -65,7 +65,7 @@ As an alternative to `Stack`, you can combine `Flex` and `Spacer` to create stac
 
 ```jsx with-preview
 import React from "react";
-import { Flex, Box, Spacer } from "@react-native-material/core";
+import { Flex, Box, Spacer } from "rn-material";
 
 const App = () => (
   <Flex fill>

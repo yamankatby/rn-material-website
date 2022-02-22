@@ -5,7 +5,7 @@ and express brand.
 
 ```js with-preview
 import React from "react";
-import { Surface, Stack } from "@react-native-material/core";
+import { Surface, Stack } from "rn-material";
 
 const App = () => (
   <Stack fill center spacing={4}>
@@ -43,14 +43,14 @@ The size of shape changes can be subtle or more significant.
 ## Import
 
 ```js
-import { Surface } from "@react-native-material/core";
+import { Surface } from "rn-material";
 ```
 
 ## Elevation
 
 ```js with-preview
 import React from "react";
-import { Surface, Text, Stack } from "@react-native-material/core";
+import { Surface, Text, Stack } from "rn-material";
 
 const App = () => (
   <Stack style={{ margin: 16 }} items="center" spacing={4}>

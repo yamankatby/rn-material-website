@@ -4,7 +4,7 @@ The App Bar displays information and actions relating to the current screen.
 
 ```js with-preview
 import React from "react";
-import { AppBar } from "@react-native-material/core";
+import { AppBar } from "rn-material";
 
 const App = () => <AppBar title="Screen title" />;
 
@@ -22,7 +22,7 @@ It can transform into a contextual action bar or be used as a navbar.
 ## Import
 
 ```js
-import { AppBar } from "@react-native-material/core";
+import { AppBar } from "rn-material";
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ import { AppBar } from "@react-native-material/core";
 
 ```js with-preview
 import React from "react";
-import { AppBar, HStack, IconButton } from "@react-native-material/core";
+import { AppBar, HStack, IconButton } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (
@@ -67,7 +67,7 @@ import {
   IconButton,
   Button,
   Avatar,
-} from "@react-native-material/core";
+} from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => {
@@ -110,7 +110,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { AppBar, IconButton, FAB } from "@react-native-material/core";
+import { AppBar, IconButton, FAB } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (

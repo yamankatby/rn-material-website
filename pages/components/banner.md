@@ -4,7 +4,7 @@ A banner displays a prominent message and related optional actions.
 
 ```js with-preview
 import React from "react";
-import { HStack, Banner, Button } from "@react-native-material/core";
+import { HStack, Banner, Button } from "rn-material";
 
 const App = () => (
   <Banner
@@ -33,14 +33,14 @@ user to either ignore them or interact with them at any time. Only one banner sh
 ## Import
 
 ```js
-import { Banner } from "@react-native-material/core";
+import { Banner } from "rn-material";
 ```
 
 ## Usage
 
 ```js with-preview
 import React from "react";
-import { HStack, Banner, Button, Avatar } from "@react-native-material/core";
+import { HStack, Banner, Button, Avatar } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (

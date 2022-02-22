@@ -4,7 +4,7 @@ Badges are used to highlight an item's status for quick recognition.
 
 ```js with-preview
 import React from "react";
-import { Badge, Stack } from "@react-native-material/core";
+import { Badge, Stack } from "rn-material";
 
 const App = () => (
   <Stack fill center spacing={4}>
@@ -23,7 +23,7 @@ export default App;
 ## Import
 
 ```js
-import { Badge } from "@react-native-material/core";
+import { Badge } from "rn-material";
 ```
 
 ## Props

@@ -19,7 +19,7 @@ import {
   DialogHeader,
   DialogContent,
   DialogActions,
-} from "@react-native-material/core";
+} from "rn-material";
 ```
 
 ## Usage
@@ -36,7 +36,7 @@ import {
   DialogContent,
   DialogActions,
   Text,
-} from "@react-native-material/core";
+} from "rn-material";
 
 const App = () => {
   const [visible, setVisible] = useState(false);
@@ -99,7 +99,7 @@ import {
   DialogActions,
   Text,
   TextInput,
-} from "@react-native-material/core";
+} from "rn-material";
 
 const App = () => {
   const [visible, setVisible] = useState(false);

@@ -10,7 +10,7 @@ import {
   BackdropSubheader,
   AppBar,
   IconButton,
-} from "@react-native-material/core";
+} from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => {
@@ -52,7 +52,7 @@ these control and inform the front layer's content.
 ## Import
 
 ```js
-import { Backdrop, BackdropSubheader } from "@react-native-material/core";
+import { Backdrop, BackdropSubheader } from "rn-material";
 ```
 
 ## Props

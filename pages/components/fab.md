@@ -4,7 +4,7 @@ A floating action button (FAB) represents the primary action of a screen.
 
 ```js with-preview
 import React from "react";
-import { Stack, FAB } from "@react-native-material/core";
+import { Stack, FAB } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (
@@ -39,7 +39,7 @@ Only use a FAB if it is the most suitable way to present a screen's primary acti
 ## Import
 
 ```js
-import { FAB } from "@react-native-material/core";
+import { FAB } from "rn-material";
 ```
 
 ## Variants
@@ -48,7 +48,7 @@ import { FAB } from "@react-native-material/core";
 
 ```js with-preview
 import React from "react";
-import { Stack, FAB } from "@react-native-material/core";
+import { Stack, FAB } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (
@@ -64,7 +64,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { Stack, FAB } from "@react-native-material/core";
+import { Stack, FAB } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (
@@ -86,7 +86,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { Stack, FAB } from "@react-native-material/core";
+import { Stack, FAB } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (
@@ -101,7 +101,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { Stack, FAB } from "@react-native-material/core";
+import { Stack, FAB } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => {
@@ -129,7 +129,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { Stack, FAB } from "@react-native-material/core";
+import { Stack, FAB } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (
@@ -158,7 +158,7 @@ export default App;
 
 ```js with-preview
 import React, { useState } from "react";
-import { Stack, FAB, Switch } from "@react-native-material/core";
+import { Stack, FAB, Switch } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => {
@@ -203,7 +203,7 @@ export default App;
 
 ```js with-preview
 import React, { useState } from "react";
-import { Stack, FAB, Text, Switch } from "@react-native-material/core";
+import { Stack, FAB, Text, Switch } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => {
