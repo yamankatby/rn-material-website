@@ -12,7 +12,7 @@ interface IProps {
 
 const Layout: React.FC<IProps> = ({ sidebar, current, children }) => {
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row">
+    <>
       <Head>
         <title>{current.title} | React Native Material</title>
         <meta name="description" content={current.description} />
@@ -28,10 +28,11 @@ const Layout: React.FC<IProps> = ({ sidebar, current, children }) => {
           gtag('config', 'G-RJL6PXS3XY');
         `}
       </Script>
-
-      <Sidebar sidebar={sidebar} />
-      <div className="prose max-w-3xl mx-auto">{children}</div>
-    </div>
+      <div className="min-h-screen flex flex-col lg:flex-row">
+        <Sidebar sidebar={sidebar} />
+        <div className="prose max-w-3xl mx-auto">{children}</div>
+      </div>
+    </>
   );
 };
 
