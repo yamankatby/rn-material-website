@@ -99,11 +99,8 @@ const remarkLayout = () => (tree, file) => {
           .split("/")
           .slice(1)
           .map(() => "../")
-          .join("")}components/Layout";`,
-        {
-          sourceType: "module",
-          ecmaVersion: 2020
-        }
+          .join("")}layout";`,
+        { sourceType: "module", ecmaVersion: 2020 }
       )
     }
   });
