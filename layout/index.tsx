@@ -1,6 +1,7 @@
 import React, { PropsWithChildren, useState } from "react";
 import Head from "next/head";
 import Script from "next/script";
+import { ThemeProvider } from "next-themes";
 import cx from "classnames";
 import Sidebar, { ISidebar, ISidebarItem } from "./Sidebar";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
@@ -20,7 +21,7 @@ interface IProps {
 const Layout: React.FC<IProps> = ({ sidebar, current, prev, next, children }) => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
   return (
-    <>
+    <ThemeProvider defaultTheme="light">
       <Head>
         <title>{current.title} | React Native Material</title>
         <meta name="description" content={current.description} />
@@ -63,7 +64,7 @@ const Layout: React.FC<IProps> = ({ sidebar, current, prev, next, children }) =>
           {sidebarVisible ? <XIcon className="w-6 h-6 m-auto" /> : <MenuIcon className="w-6 h-6 m-auto" />}
         </button>
       </div>
-    </>
+    </ThemeProvider>
   );
 };
 

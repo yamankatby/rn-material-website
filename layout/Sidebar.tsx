@@ -33,7 +33,7 @@ const Sidebar: React.FC<IProps> = ({ sidebar, current }) => {
         <a
           className={cx(
             "mt-0.5 px-3 py-2 flex justify-between items-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 hover:underline",
-            { "bg-primary-500 bg-opacity-10 hover:bg-primary-500 hover:bg-opacity-20 text-primary-500": item.path === current.path },
+            { "bg-primary bg-opacity-10 hover:bg-primary hover:bg-opacity-20 text-primary": item.path === current.path },
           )}>
           {item.title || item.path}
         </a>

@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: colors.indigo,
+        primary: colors.indigo[500],
         gray: colors.zinc
       },
       typography: (theme) => ({
