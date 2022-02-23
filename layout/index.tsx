@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useState } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Script from "next/script";
 import { ThemeProvider } from "next-themes";
@@ -68,4 +68,4 @@ const Layout: React.FC<IProps> = ({ sidebar, current, prev, next, children }) =>
   );
 };
 
-export const withLayout = (props: PropsWithChildren<IProps>) => <Layout {...props} />;
+export default Layout;

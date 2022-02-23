@@ -91,20 +91,6 @@ const remarkLayout = () => (tree, file) => {
     .replace("/pages", "")
     .replace("index", "");
 
-  tree.children.unshift({
-    type: "mdxjsEsm",
-    data: {
-      estree: parse(
-        `import { withLayout } from "${path
-          .split("/")
-          .slice(1)
-          .map(() => "../")
-          .join("")}layout";`,
-        { sourceType: "module", ecmaVersion: 2020 }
-      )
-    }
-  });
-
   tree.children.push(
     {
       type: "mdxjsEsm",
@@ -112,12 +98,6 @@ const remarkLayout = () => (tree, file) => {
         estree: parse(getStaticProps(path), { sourceType: "module", ecmaVersion: 2020 })
       }
     },
-    {
-      type: "mdxjsEsm",
-      data: {
-        estree: parse(`export default (props) => withLayout(props);`, { sourceType: "module", ecmaVersion: 2020 })
-      }
-    }
   );
 };
 
