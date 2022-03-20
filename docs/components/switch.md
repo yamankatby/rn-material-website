@@ -4,7 +4,7 @@ Switches toggle the state of a single item on or off.
 
 ```js with-preview
 import React, { useState } from "react";
-import { Stack, Switch } from "@react-native-material/core";
+import { Stack, Switch } from "rn-material";
 
 const App = () => {
   const [checked, setChecked] = useState(true);
@@ -24,7 +24,7 @@ export default App;
 ## Import
 
 ```js
-import { Switch } from "@react-native-material/core";
+import { Switch } from "rn-material";
 ```
 
 ## Usage
@@ -38,7 +38,7 @@ Use switches to:
 
 ```js with-preview
 import React, { useState } from "react";
-import { ListItem, Switch } from "@react-native-material/core";
+import { ListItem, Switch } from "rn-material";
 
 const App = () => {
   const [checked, setChecked] = useState(true);

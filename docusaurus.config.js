@@ -64,7 +64,7 @@ const config = {
         searchParameters: {}
       },
       navbar: {
-        title: '@react-native-material',
+        title: 'rn-material',
         items: [
           {
             type: 'doc',
@@ -75,9 +75,9 @@ const config = {
           { to: '/blog', label: 'Blog', position: 'left' },
           {
             type: 'dropdown',
-            label: 'v1.3.5',
+            label: 'v1.3.7',
             items: [
-              { label: 'v1.3.5', to: '/' },
+              { label: 'v1.3.7', to: '/' },
               { label: 'v1.2.*', href: 'https://react-native-material-hadt1ykpo-yamankatby.vercel.app' },
               {
                 label: 'v1.1.*',
@@ -141,7 +141,7 @@ const config = {
             ]
           }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} @react-native-material. Built with Docusaurus.`
+        copyright: `Copyright © ${new Date().getFullYear()} rn-material. Built with Docusaurus.`
       },
       prism: {
         theme: lightCodeTheme,

@@ -2,7 +2,7 @@
 
 ```js with-preview
 import React from "react";
-import { Pressable } from "@react-native-material/core";
+import { Pressable } from "rn-material";
 
 const App = () => (
   <Pressable style={{ width: 80, height: 80, backgroundColor: "skyblue" }} />
@@ -16,7 +16,7 @@ export default App;
 ## Import
 
 ```js
-import { Pressable } from "@react-native-material/core";
+import { Pressable } from "rn-material";
 ```
 
 ## Props

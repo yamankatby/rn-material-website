@@ -10,5 +10,5 @@ the `Modal` and `Popper` components.
 ## Import
 
 ```js
-import { Portal } from "@react-native-material/core";
+import { Portal } from "rn-material";
 ```

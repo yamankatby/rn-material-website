@@ -12,14 +12,14 @@ Dividers are used to visually separate content in a list or group.
 ## Import
 
 ```js
-import { Divider } from "@react-native-material/core";
+import { Divider } from "rn-material";
 ```
 
 ## Usage
 
 ```js with-preview
 import React from "react";
-import { Divider } from "@react-native-material/core";
+import { Divider } from "rn-material";
 
 const App = () => <Divider style={{ marginTop: 60 }} />;
 

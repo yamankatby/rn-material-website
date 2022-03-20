@@ -5,7 +5,7 @@ Snackbars provide brief messages about app processes at the bottom of the screen
 ```js with-preview
 import React from "react";
 import { View } from "react-native";
-import { Snackbar } from "@react-native-material/core";
+import { Snackbar } from "rn-material";
 
 const App = () => (
   <View style={{ flex: 1 }}>
@@ -25,7 +25,7 @@ export default App;
 ## Import
 
 ```js
-import { Snackbar } from "@react-native-material/core";
+import { Snackbar } from "rn-material";
 ```
 
 ## Usage
@@ -42,7 +42,7 @@ Only one snackbar may be displayed at a time.
 ```js with-preview
 import React from "react";
 import { View } from "react-native";
-import { Snackbar, Button } from "@react-native-material/core";
+import { Snackbar, Button } from "rn-material";
 
 const App = () => (
   <View style={{ flex: 1 }}>
@@ -62,7 +62,7 @@ export default App;
 ```js with-preview
 import React from "react";
 import { View } from "react-native";
-import { Snackbar, Button } from "@react-native-material/core";
+import { Snackbar, Button } from "rn-material";
 
 const App = () => (
   <View style={{ flex: 1 }}>

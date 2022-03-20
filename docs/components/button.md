@@ -4,7 +4,7 @@ Buttons allow users to take actions, and make choices, with a single tap.
 
 ```js with-preview
 import React from "react";
-import { Stack, Button } from "@react-native-material/core";
+import { Stack, Button } from "rn-material";
 
 const App = () => (
   <Stack fill center spacing={4}>
@@ -30,14 +30,14 @@ Buttons communicate actions that users can take. They are typically placed throu
 ## Import
 
 ```js
-import { Button } from "@react-native-material/core";
+import { Button } from "rn-material";
 ```
 
 ## Disabled
 
 ```js with-preview
 import React from "react";
-import { Stack, Button } from "@react-native-material/core";
+import { Stack, Button } from "rn-material";
 
 const App = () => (
   <Stack fill center spacing={4}>
@@ -54,7 +54,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { Stack, Button } from "@react-native-material/core";
+import { Stack, Button } from "rn-material";
 
 const App = () => (
   <Stack fill center spacing={4}>
@@ -72,7 +72,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { Stack, Button } from "@react-native-material/core";
+import { Stack, Button } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (
@@ -93,7 +93,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { Stack, Button } from "@react-native-material/core";
+import { Stack, Button } from "rn-material";
 
 const App = () => (
   <Stack fill center spacing={4}>
@@ -109,7 +109,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { Stack, Button } from "@react-native-material/core";
+import { Stack, Button } from "rn-material";
 
 const App = () => (
   <Stack fill center spacing={4}>
@@ -125,7 +125,7 @@ export default App;
 
 ```js with-preview
 import React, { useState } from "react";
-import { Stack, Button, Switch } from "@react-native-material/core";
+import { Stack, Button, Switch } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => {
@@ -160,7 +160,7 @@ export default App;
 
 ```js with-preview
 import React, { useState } from "react";
-import { Stack, Button, Text, Switch } from "@react-native-material/core";
+import { Stack, Button, Text, Switch } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => {

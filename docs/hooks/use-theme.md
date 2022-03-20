@@ -5,7 +5,7 @@
 ## Import
 
 ```js
-import { useTheme } from "@react-native-material/core";
+import { useTheme } from "rn-material";
 ```
 
 ## Return value
@@ -17,7 +17,7 @@ The `useTheme` hook returns the theme object.
 ```js
 import React from "react";
 import { View } from "react-native";
-import { useTheme } from "@react-native-material/core";
+import { useTheme } from "rn-material";
 
 function Example() {
   const theme = useTheme()

@@ -6,7 +6,7 @@ and `toggle` functions.
 ## Import
 
 ```js
-import { useBoolean } from '@react-native-material/core'
+import { useBoolean } from 'rn-material'
 ```
 
 ## Return value
@@ -25,7 +25,7 @@ The `useBoolean` hook returns a stateful boolean value and an object with the fo
 
 ```js with-preview
 import React from "react";
-import { VStack, Button, Text, useBoolean } from "@react-native-material/core";
+import { VStack, Button, Text, useBoolean } from "rn-material";
 
 const App = () => {
   const [flag, setFlag] = useBoolean();
@@ -46,7 +46,7 @@ export default App;
 ```js with-preview
 import React from "react";
 import { View } from "react-native";
-import { Text, useBoolean } from "@react-native-material/core";
+import { Text, useBoolean } from "rn-material";
 
 const App = () => {
   const [flag, setFlag] = useBoolean();

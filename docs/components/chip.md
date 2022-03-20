@@ -4,7 +4,7 @@ A chip is a small block of information, typically used to represent a category.
 
 ```js with-preview
 import React from "react";
-import { Stack, Chip } from "@react-native-material/core";
+import { Stack, Chip } from "rn-material";
 
 const App = () => (
   <Stack fill center spacing={4}>
@@ -22,7 +22,7 @@ export default App;
 ## Import
 
 ```js
-import { Chip } from "@react-native-material/core";
+import { Chip } from "rn-material";
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ interactive elements.
 
 ```js with-preview
 import React from "react";
-import { Stack, Chip } from "@react-native-material/core";
+import { Stack, Chip } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (

@@ -19,7 +19,7 @@ import { Spacer } from 'react-native-flex-layout';
 
 ```jsx with-preview
 import React from "react";
-import { Flex, Box, Spacer } from "@react-native-material/core";
+import { Flex, Box, Spacer } from "rn-material";
 
 const App = () => (
   <Flex fill>
@@ -36,7 +36,7 @@ Usage with `Stack`
 
 ```jsx with-preview
 import React from "react";
-import { HStack, Box, Spacer } from "@react-native-material/core";
+import { HStack, Box, Spacer } from "rn-material";
 
 const App = () => (
   <HStack fill>

@@ -2,7 +2,7 @@
 
 ```js with-preview
 import React from "react";
-import { IconComponentProvider, Icon } from "@react-native-material/core";
+import { IconComponentProvider, Icon } from "rn-material";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (
@@ -23,7 +23,7 @@ export default () => (
 ## Import
 
 ```js
-import { Icon } from "@react-native-material/core";
+import { Icon } from "rn-material";
 ```
 
 ## Props

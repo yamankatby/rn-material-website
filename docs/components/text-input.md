@@ -10,7 +10,7 @@ Text inputs come in three variants:
 
 ```js with-preview
 import React from "react";
-import { Stack, TextInput, IconButton } from "@react-native-material/core";
+import { Stack, TextInput, IconButton } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (
@@ -39,7 +39,7 @@ export default App;
 ## Import
 
 ```js
-import { TextInput } from "@react-native-material/core";
+import { TextInput } from "rn-material";
 ```
 
 ## Usage
@@ -50,7 +50,7 @@ Here's a basic usage example of the Input component:
 
 ```js with-preview
 import React from "react";
-import { TextInput } from "@react-native-material/core";
+import { TextInput } from "rn-material";
 
 const App = () => <TextInput label="Label" style={{ margin: 16 }} />;
 
@@ -61,7 +61,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { TextInput } from "@react-native-material/core";
+import { TextInput } from "rn-material";
 
 const App = () => (
   <TextInput variant="outlined" label="Label" style={{ margin: 16 }} />
@@ -74,7 +74,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { TextInput } from "@react-native-material/core";
+import { TextInput } from "rn-material";
 
 const App = () => (
   <TextInput variant="standard" label="Label" style={{ margin: 16 }} />

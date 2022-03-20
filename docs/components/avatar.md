@@ -4,7 +4,7 @@ Avatars are found throughout material design with uses in everything from tables
 
 ```js with-preview
 import React from "react";
-import { Stack, Avatar } from "@react-native-material/core";
+import { Stack, Avatar } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (
@@ -23,14 +23,14 @@ export default App;
 ## Import
 
 ```js
-import { Avatar } from "@react-native-material/core";
+import { Avatar } from "rn-material";
 ```
 
 ## Letter avatars
 
 ```js with-preview
 import React from "react";
-import { Stack, Avatar } from "@react-native-material/core";
+import { Stack, Avatar } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (
@@ -50,7 +50,7 @@ export default App;
 ```js with-preview
 import React from "react";
 import { Image } from "react-native";
-import { Stack, Avatar } from "@react-native-material/core";
+import { Stack, Avatar } from "rn-material";
 
 const App = () => (
   <Stack fill center spacing={4}>
@@ -80,7 +80,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { Stack, Avatar } from "@react-native-material/core";
+import { Stack, Avatar } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (
@@ -106,7 +106,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { Stack, Avatar } from "@react-native-material/core";
+import { Stack, Avatar } from "rn-material";
 
 const App = () => (
   <Stack fill center spacing={4}>
@@ -123,7 +123,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { Stack, Avatar } from "@react-native-material/core";
+import { Stack, Avatar } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (
@@ -153,7 +153,7 @@ export default App;
 
 ```js with-preview
 import React from "react";
-import { Stack, Avatar } from "@react-native-material/core";
+import { Stack, Avatar } from "rn-material";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const App = () => (

@@ -26,7 +26,7 @@ In the example below, you see that the last `Box` wrapped to the next line.
 ```js with-preview
 import React from "react";
 import { View } from "react-native";
-import { Wrap, Box, Divider } from "@react-native-material/core";
+import { Wrap, Box, Divider } from "rn-material";
 
 const App = () => (
   <Wrap m={4}>
@@ -46,7 +46,7 @@ Pass the `spacing` prop to apply consistent spacing between each child, even if 
 ```js with-preview
 import React from "react";
 import { View } from "react-native";
-import { Wrap, Box, Divider } from "@react-native-material/core";
+import { Wrap, Box, Divider } from "rn-material";
 
 const App = () => (
   <Wrap m={4} spacing={2}>
@@ -68,7 +68,7 @@ Pass the `justify` prop to change the alignment of the child along the main axis
 ```js with-preview
 import React from "react";
 import { View } from "react-native";
-import { Wrap, Box, Divider } from "@react-native-material/core";
+import { Wrap, Box, Divider } from "rn-material";
 
 const App = () => (
   <Wrap m={4} items="center" spacing={2}>

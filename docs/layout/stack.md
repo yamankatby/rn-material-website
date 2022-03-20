@@ -27,7 +27,7 @@ the `Stack` component as well and pass the `direction` prop.
 ```js with-preview
 import React from "react";
 import { View } from "react-native";
-import { HStack } from "@react-native-material/core";
+import { HStack } from "rn-material";
 
 const App = () => (
   <HStack m={4} spacing={6}>
@@ -48,7 +48,7 @@ to `true` or any custom React element.
 ```js with-preview
 import React from "react";
 import { View } from "react-native";
-import { VStack, Box, Divider } from "@react-native-material/core";
+import { VStack, Box, Divider } from "rn-material";
 
 const App = () => (
   <VStack m={4} spacing={2} divider={true}>
