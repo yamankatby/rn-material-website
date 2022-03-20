@@ -2,25 +2,24 @@
 sidebar_position: 1
 ---
 
-# Getting started
+# Getting Started
 
-Get started with **React Native Material** with no time.
+Add **rn-material** to your project in < 1 minute.
 
 ## Installation
 
 Open a Terminal in your project's folder and run:
 
 ```bash npm2yarn
-npm install @react-native-material/core
+npm install rn-material
 ```
 
-## Quick Start
+## Quick start
 
 Here's a quick example to get you started, **it's literally all you need**:
 
 ```js
-import React from "react";
-import { Button } from "@react-native-material/core";
+import { Button } from "rn-material";
 
 const App = () => (
   <Button title="Click Me" onPress={() => alert("🎉🎉🎉")}/>
@@ -29,48 +28,51 @@ const App = () => (
 export default App;
 ```
 
-Yes, this really is all you need to get started, as you can see in this live and interactive demo:
+Yes, this really is all you need to get started 🎉, as you can see in this live and interactive demo:
 
 ```js with-preview name: Quick start; description: A simple example of the button component
 import React from "react";
-import { Button } from "@react-native-material/core";
+import { Button } from "rn-material";
 
 const App = () => (
-  <Button title="Click Me" style={{ alignSelf: "center", marginTop: 40 }}/>
+  <Button
+    title="Click Me"
+    style={{ alignSelf: "center", marginTop: 40 }}
+  />
 );
 
 export default App;
 ```
 
-## Community help
+## Set up Provider
 
-The community is your first stop for questions and advice about the framework. Welcome to the community!
+For **rn-material** to work currently, you need to wrap your whole app with a [`Provider`](/) component.
 
-### StackOverflow
+> This will usually be in the `App.js` or `App.tsx` file.
 
-For crowdsourced answers from expert **react-native-material** developers in our community. StackOverflow is also
-frequented, from time to time, by the maintainers of **react-native-material**.
+Go to the root component of your app and add the following:
 
-[Post a question](https://stackoverflow.com/questions/tagged/react-native-material)
+```jsx
+// 1. Import the `Provider` component from `rn-material`
+import { Provider } from "rn-material";
 
-### GitHub
+const App = () => (
+  // 2. Wrap your app with the `Provider` component
+  <Provider>
+    <Main />
+  </Provider>
+);
 
-**react-native-material** uses GitHub issues as a bug and feature request tracker. If you think you have found a bug, or
-have a new feature idea, please start by making sure it hasn't already
-been [reported or fixed](https://github.com/yamankatby/react-native-material/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aclosed)
-. You can search through existing issues and pull requests to see if someone has reported one similar to yours.
+export default App;
+```
 
-[Open an issue](https://github.com/yamankatby/react-native-material/issues/new/choose)
+The [`Provider`](/) component provides the theme context to all components in the library. It also acts as a portal to
+components which need to be rendered at the top level (such as dialogs, popups, etc.).
 
-## Contributing
+Refer to the [Theming](/guides/theming) documentation for more information.
 
-Please take a look at [Kanban](https://github.com/yamankatby/react-native-material/projects/1) where we have a roadmap
-for **react-native-material** community. Also, we have a list
-of [good first issues](https://github.com/yamankatby/react-native-material/labels/good%20first%20issue) that contain
-bugs that have a relatively limited scope. This is a great place to get started, gain experience, and get familiar with
-our contribution process.
+## Support
 
-## License
-
-This library is licensed under the MIT License - see
-the [LICENSE](https://github.com/yamankatby/react-native-material/blob/main/LICENSE) file for details.
+If you have any questions, contact [@yamankatby](https://twitter.com/yamankatby) on Twitter
+or [start a discussion on GitHub](https://github.com/yamankatby/react-native-material/discussions). In case of bugs or
+feature requests, please [open an issue on GitHub](https://github.com/yamankatby/react-native-material/issues).
